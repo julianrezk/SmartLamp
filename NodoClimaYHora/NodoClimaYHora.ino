@@ -1,7 +1,3 @@
-// Robo India Tutorials
-// Hardware: NodeMCU
-// simple Code for reading information from openweathermap.org 
-
 #include <ESP8266WiFi.h>
 #include <LiquidCrystal_I2C.h>
 
@@ -281,23 +277,5 @@ void on_message(const char* topic, byte* payload, unsigned int length)
    *     el widget gauge envian un comando rotateMotorValue con un int de los grados a rotar el motos (servo)
    *     Luego se responde con un mensaje para que actualice la Card correspondiente a la Door (doorState)
    */
-   
-  if (methodName.equals("setFrayBentos")) {
-    bool action = data["params"];
-    cambiarCiudad("setFrayBentos",action);
-
-  }
-
-  if (methodName.equals("setMontevideo")) {
-    bool action = data["params"];
-    cambiarCiudad("setMontevideo",action);
-
-  }
-
-  if (methodName.equals("setTreintaYTres")) {
-    bool action = data["params"];
-    cambiarCiudad("setTreintaYTres",action);
-  }
 }
-
 
